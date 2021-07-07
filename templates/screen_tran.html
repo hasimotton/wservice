@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+
+<html lang="ja">
+<meta charset="utf-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{menu_name}}掲示板</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/screen_tran.css') }}">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>【{{menu_name}}掲示板】</h1>
+            <p><a href="/"></a></p>
+            <h2 class="singer">【投稿一覧】</h2>
+
+            <form method="post" action="">
+                　<table class="table">
+                    <tr>
+                        <th>ジャンル</th>
+                        <th>名前</th>
+                        <th>投稿内容</th>
+                        <th>日付</th>
+
+                    </tr>
+                    <tbody>
+                        {% for th in lines %}
+                        <tr>
+                            <td>{{ th.category }}</td>
+                            <td>{{ th.name }}</td>
+                            <td>{{ th.comment }}</td>
+                            <td>{{ th.pub_date }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+
+
+            <form action="/" method="post" id="post_form">
+
+                <input type="hidden" name="comment_box">
+
+                <label class="category" for="category">ジャンル : {{ genre }}</label>
+                <input type="text" name="category" placeholder="ジャンルを入力してください">
+
+                <label class="name" for="name">名前</label>
+                <input type="text" name="name" placeholder="名前を入力してください">
+
+                <label class="comment" for="comment_">投稿</label>
+                <textarea name="comment_data" rows="6" cols="8" placeholder="入力してください"></textarea>
+
+                <button class="btn" type="submit">書き込む</button>
+
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="/"><i class="fas fa-chevron-right"></i> メニューに戻る</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
+
+
+{% endblock %}

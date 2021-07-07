@@ -1,0 +1,72 @@
+.header{
+    border-top: 2px solid #34b792;
+    border-bottom: 1px solid #e5e5e5;
+
+    width: 100%;
+    height: 480px;
+    background: url('./icon.png');
+    
+}
+
+.header h1{
+    text-align: center;
+}
+
+.category{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 48px;
+    letter-spacing: -.4em;
+}
+
+.down{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+ul li{
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    height: 100%;
+    letter-spacing: normal;
+    letter-spacing: normal;
+}
+
+ul li div{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid #f2f2f2;
+}
+
+ul li:nth-child(1) div{
+    border-left: 1px solid #f2f2f2;
+}
+
+ul li:hover{
+    background-color: #ecf0f1;
+}
+
+ul li a{
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a span{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+

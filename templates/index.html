@@ -1,0 +1,70 @@
+<!--DOCTYPE html-->
+{% extends "layout.html" %}
+{% block content %}
+<html lang="ja">
+<meta charset="utf-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>簡易掲示板</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SFCなんでも掲示板</h1>
+        </div>
+
+        <dvi class="category">
+            <ul class="up">
+                <li>
+                    <div><a href="/fashion"><span>おしゃれ</span></a></div>
+                </li>
+                <li>
+                    <div></div><a href="/music"><span>音楽</span></a>
+                </li>
+                <li>
+                    <div><a href="/game"><span>ゲーム</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/sport"><span>スポーツ</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/ptjob"><span>バイト</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/lecture"><span>授業</span></a></div>
+                </li>
+            </ul>
+            <ul class="down">
+                <li>
+                    <div><a href="/university"><span>大学</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/shopping"><span>買い物</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/movie"><span>映画</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/amenity"><span>娯楽</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/anything"><span>なんでも</span></a></div>
+                </li>
+                <li>
+                    <div><a href="/other"><span>その他</span></a></div>
+                </li>
+            </ul>
+
+        </dvi>
+        
+
+        <p></p>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}
